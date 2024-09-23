@@ -1,0 +1,315 @@
+pyautogui==0.9.53
+reportlab==3.6.12
+PyPDF2==3.0.1
+
+
+
+
+
+
+
+
+
+touch testfile{1..10}.txt
+touch -a testfile.txt
+touch -m testfile.txt
+rm testfile.txt
+rm -f testfile2.txt
+rm -rf testdir
+rm -i testfile3.txt
+rm -v testfile4.txt
+cp testfile1.txt testfile2.txt
+cp -r testdir1 testdir2
+cp -i testfile2.txt testfile3.txt
+cp --backup testfile4.txt testfile5.txt
+mv testfile1.txt testdir/
+mv -i testfile2.txt testfile3.txt
+mv -v testfile4.txt testfile5.txt
+mv -u testfile6.txt testfile7.txt
+cat testfile3.txt
+cat /etc/passwd
+cat -n testfile3.txt
+cat -b testfile4.txt
+cat -A testfile5.txt
+cat --help
+echo "Hello, World!"
+echo $PATH
+echo $HOME
+echo -n "No newline"
+echo -e "Line1\nLine2"
+echo "export PATH=\$PATH:/new/path" >> ~/.bashrc
+echo -e "line1\nline2\nline3" > file.txt
+head file.txt
+head -n 5 file.txt
+head -c 10 file.txt
+tail file.txt
+tail -n 5 file.txt
+tail -f /var/log/syslog
+tail -n +3 file.txt
+tail -c 20 file.txt
+nl file.txt
+more file.txt
+less file.txt
+grep "pattern" file.txt
+grep -i "pattern" file.txt
+grep -r "pattern" testdir/
+grep -v "pattern" file.txt
+grep --color=auto "pattern" file.txt
+grep -l "pattern" file.txt
+find / -name "file.txt"
+find . -type d
+find . -type f
+find / -size +100M
+find . -name "*.txt"
+find / -perm 755
+find / -mtime -1
+find / -maxdepth 1
+find . -empty
+locate testfile.txt
+locate "*.conf"
+updatedb
+wc file.txt
+wc -l file.txt
+wc -w file.txt
+wc -c file.txt
+sort file.txt
+sort -r file.txt
+sort -n file.txt
+uniq file.txt
+uniq -c file.txt
+uniq -d file.txt
+chmod 644 file.txt
+chmod +x script.sh
+chmod -R 755 testdir
+chmod u=rwx,g=rx,o=rx testdir/
+chown user:group file.txt
+chown -R user:group testdir/
+chown --reference=otherfile.txt file.txt
+df
+df -h
+df -i
+df -T
+df -x tmpfs
+du
+du -h
+du -sh .
+du -csh
+du --max-depth=1
+ps
+ps aux
+ps -ef
+ps -u username
+ps -eo pid,comm,%cpu,%mem
+ps -p 1234
+top
+htop
+kill -9 1234
+killall firefox
+killall -9 chrome
+bg
+fg
+jobs
+export PATH=$PATH:/new/path
+unset PATH
+alias ll='ls -alF'
+unalias ll
+history
+history -c
+history | tail -n 10
+clear
+uptime
+whoami
+id
+id -u
+id -g
+id username
+date
+date "+%Y-%m-%d"
+date "+%H:%M:%S"
+cal
+cal -3
+cal 2023
+man ls
+man grep
+man man
+man -k "network"
+info ls
+hostname
+hostnamectl
+uname
+uname -a
+uname -r
+uname -m
+uname -s
+uname -p
+uname -o
+lscpu
+lsblk
+lsusb
+lspci
+free
+free -h
+free -m
+dmesg
+dmesg | tail
+dmesg | grep "error"
+fdisk -l
+parted -l
+mount
+mount | column -t
+umount /dev/sdb1
+blkid
+mkfs.ext4 /dev/sdb1
+fsck /dev/sdb1
+sync
+swapon -s
+swapoff /swapfile
+swapon /swapfile
+mkswap /swapfile
+top
+htop
+uptime
+uname -r
+hostname
+ping -c 4 google.com
+ping -i 2 8.8.8.8
+traceroute google.com
+who
+w
+last
+lastlog
+loginctl
+groups
+users
+cut -d: -f1 /etc/passwd
+cut -d' ' -f1 file.txt
+cut -c1-5 file.txt
+awk '{print $1}' file.txt
+awk '/pattern/' file.txt
+sed 's/old/new/g' file.txt
+sed -i 's/old/new/g' file.txt
+sed '/pattern/d' file.txt
+sed 's/\bfoo\b/bar/g' file.txt
+diff file1.txt file2.txt
+cmp file1.txt file2.txt
+comm file1.txt file2.txt
+xargs echo < file.txt
+xargs -n 1 < file.txt
+bc -l
+factor 100
+expr 2 + 3
+seq 1 10
+seq -s, 1 5
+yes
+yes | head -n 5
+crontab -l
+crontab -e
+lsattr
+chattr +i file.txt
+chattr -i file.txt
+df
+du
+du -sh *
+find / -type f -name "*.conf"
+find / -perm 777
+ip a
+ip link show
+ip route
+ip link set eth0 up
+ip link set eth0 down
+netstat -tuln
+ss -tuln
+ss -tulnp
+traceroute google.com
+ping google.com
+ping -c 3 8.8.8.8
+arp
+arp -a
+ifconfig
+ifconfig eth0
+ifconfig wlan0 down
+ifconfig wlan0 up
+iwconfig
+iwlist scan
+iwlist wlan0 scan
+ip addr show
+nmcli device status
+nmcli connection show
+nmcli radio
+nmcli connection up id "Wi-Fi Connection"
+nmcli connection down id "Wi-Fi Connection"
+nmcli dev wifi list
+hostname
+hostname -I
+hostnamectl set-hostname newhostname
+sudo hostnamectl set-hostname newhostname
+ping -c 4 google.com
+traceroute google.com
+ifconfig
+netstat -tuln
+ss -tuln
+lsof
+tcpdump
+dig google.com
+nslookup google.com
+curl google.com
+curl -I google.com
+wget http://example.com
+wget -O output.html http://example.com
+ping -c 3 google.com
+ping -i 0.5 google.com
+curl -O http://example.com/file.txt
+whois example.com
+nslookup example.com
+host google.com
+ping -c 4 google.com
+traceroute 8.8.8.8
+curl http://example.com
+wget http://example.com
+curl -I http://example.com
+lsof -i :80
+lsof -n -P
+ss -plunt
+nc -zv google.com 80
+nc -l 1234
+netcat google.com 80
+scp user@remote:/path/to/file /local/path
+ssh user@remote
+rsync -avz /source/ user@remote:/destination/
+rsync -avz user@remote:/source/ /destination/
+tar -cvf archive.tar file1 file2
+tar -xvf archive.tar
+gzip file.txt
+gunzip file.txt.gz
+bzip2 file.txt
+bunzip2 file.txt.bz2
+zip archive.zip file1 file2
+unzip archive.zip
+hostnamectl status
+hostnamectl set-hostname newhostname
+uname -a
+uptime
+uname -r
+whoami
+who
+w
+df -h
+du -sh
+free -h
+lscpu
+lsblk
+lsusb
+lspci
+dmesg
+journalctl -xe
+systemctl status
+systemctl start
+systemctl stop
+systemctl restart
+systemctl enable
+systemctl disable
+systemctl reload
+service --status-all
+service apache2 start
+service apache2 stop
+service apache2 restart

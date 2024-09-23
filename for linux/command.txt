@@ -1,0 +1,20 @@
+ls
+pwd
+mkdir testdir
+cd testdir
+cd ..
+rmdir testdir
+touch testfile.txt
+echo "Hello World!" > testfile.txt
+cat testfile.txt
+mv testfile.txt testfile2.txt
+cp testfile2.txt testfile3.txt
+rm testfile3.txt
+ifconfig
+ip
+hostname
+whoami
+uname
+arch
+lscpu
+lsmem

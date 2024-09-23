@@ -1,0 +1,4 @@
+pyautogui==0.9.54
+Pillow==10.4.0
+reportlab==3.6.13
+PyPDF2==3.0.1
