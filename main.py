@@ -21,11 +21,13 @@ def generate_image():
         pyautogui.hotkey('win','up')
         pyautogui.typewrite("kali")
         pyautogui.press('enter')
-        time.sleep(3)
+        time.sleep(6)
         pyautogui.typewrite("clear")
         pyautogui.press('enter')
+        time.sleep(1)
+        
               
-        for i in range(1,22):
+        for i in range(1,202):
             x=f.readline()
             x=x.replace("\n","")
             pyautogui.typewrite(x)
@@ -36,7 +38,8 @@ def generate_image():
             image1 = pyautogui.screenshot(f"image/image{i}.png")
             pyautogui.typewrite("clear")
             pyautogui.press('enter')
-            print(x)  
+            time.sleep(1)
+            print(f"{i}. {x}")  
             
     pyautogui.typewrite("exit")
     pyautogui.press('enter')
@@ -153,22 +156,35 @@ def create_pdfs():
     print("All PDFs created successfully")
 
 
+# def merge_pdfs():
+#     merger = PyPDF2.PdfMerger()
+
+#     for file in os.listdir(os.curdir+"/raw_pdfs"):
+#         file = os.path.join(os.curdir+"/raw_pdfs", file)
+#         if file.endswith(".pdf"):
+#             merger.append(file)
+#     merger.write("screenshot.pdf")
+    
+#     print("All PDFs merged successfully. Output file: screenshot.pdf")
+    
+    
 def merge_pdfs():
     merger = PyPDF2.PdfMerger()
 
-    for file in os.listdir(os.curdir+"/raw_pdfs"):
-        file = os.path.join(os.curdir+"/raw_pdfs", file)
+    for i in range(1, 101):
+        # file = os.path.join(os.curdir+"/raw_pdfs", file)
+        file=f"raw_pdfs/pdf{i}.pdf"
         if file.endswith(".pdf"):
             merger.append(file)
     merger.write("screenshot.pdf")
     
     print("All PDFs merged successfully. Output file: screenshot.pdf")
-    
+
 
 
 # input("Prepare linux terminal and Press Enter to start the process. The switch to terminal.\n You will have 5 seconds to switch to terminal \n Press Enter to start the process")
-input("Press enter to start the process. Do not use the Pc while the process is running.")
-generate_image()
-create_pdfs()
+# input("Press enter to start the process. Do not use the Pc while the process is running.")
+# generate_image()
+# create_pdfs()
 merge_pdfs()
 input("Press Enter to exit")

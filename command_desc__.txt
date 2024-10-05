@@ -1,0 +1,20 @@
+ls - Lists files and directories in the current directory.
+pwd - Displays the current working directory path.
+mkdir testdir - Creates a new directory named 'testdir'.
+cd testdir - Changes the current directory to 'testdir'.
+cd .. - Moves to the parent directory.
+rmdir testdir - Removes the empty directory 'testdir'.
+touch testfile.txt - Creates an empty file named 'testfile.txt'.
+echo "Hello World!" > testfile.txt - Writes "Hello World!" into 'testfile.txt'.
+cat testfile.txt - Displays the contents of 'testfile.txt'.
+mv testfile.txt testfile2.txt - Renames or moves 'testfile.txt' to 'testfile2.txt'.
+cp testfile2.txt testfile3.txt - Copies 'testfile2.txt' to 'testfile3.txt'.
+rm testfile3.txt - Removes (deletes) 'testfile3.txt'.
+ifconfig - Displays network interface configuration (deprecated, use 'ip').
+ip - Shows or manages IP addresses and network interfaces.
+hostname - Displays or sets the system's hostname.
+whoami - Displays the current user's username.
+uname - Shows system information like OS name and kernel version.
+arch - Displays the system architecture (e.g., x86_64).
+lscpu - Shows detailed CPU architecture information.
+lsmem - Displays memory information of the system.
