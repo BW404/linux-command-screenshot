@@ -1,0 +1,200 @@
+1. ls -> List directory contents.
+2. ls -l -> List with detailed information.
+3. ls -lh -> List with human-readable file sizes.
+4. ls -R -> List directories and their contents recursively.
+5. ls -ltr -> List in reverse chronological order.
+6. ls --help -> Display help for the `ls` command.
+7. ls -a -> List all files, including hidden files.
+8. ls -A -> List all except `.` and `..`.
+9. ls --author -> Display author of each file.
+10. ls -b -> Escape special characters in file names.
+11. ls --block-size=2KB -> Display sizes using 2KB blocks.
+12. ls -B -> Omit backups ending with `~`.
+13. ls -c -> Sort by modification time.
+14. ls -C -> List entries by columns.
+15. ls -d -> List only directories.
+16. ls -D -> Unsupported, likely a typo or unused.
+17. ls -f -> List without sorting, includes `.` and `..`.
+18. ls -F -> Append indicators (e.g., `/` for directories).
+19. ls --file-type -> Indicate file types without `` for executables.
+20. ls --full-time -> Display full date and time.
+21. ls -g -> Like `l`, but omits owner.
+22. ls --group-directories-first -> List directories first.
+23. pwd -> Print working directory.
+24. cd / -> Change to the root directory.
+25. cd ~ -> Change to the home directory.
+26. cd .. -> Move up one directory.
+27. cd /tmp -> Change to the `/tmp` directory.
+28. cd /usr/bin -> Change to `/usr/bin`.
+29. cd -P -> Change to the physical directory.
+30. cd --help -> Display help for the `cd` command.
+31. touch testfile{1..10}.txt && ls -> Create multiple files and list them.
+32. touch -a testfile.txt -> Update access time of the file.
+33. touch -m testfile.txt -> Update modification time of the file.
+34. rm testfile.txt -> Remove a file.
+35. rm -f testfile2.txt -> Force remove a file.
+36. rm -rf testdir -> Force remove a directory and its contents.
+37. rm -i testfile3.txt -> Interactive remove a file.
+38. rm -v testfile4.txt -> Verbose remove, show files being removed.
+39. cp testfile1.txt testfile2.txt -> Copy a file.
+40. cp -r testdir1 testdir2 -> Recursively copy a directory.
+41. cp -i testfile2.txt testfile3.txt -> Interactive copy, prompt before overwrite.
+42. cp --backup testfile4.txt testfile5.txt -> Backup file before copying.
+43. mv testfile1.txt testdir/ -> Move a file to a directory.
+44. mv -i testfile2.txt testfile3.txt -> Interactive move, prompt before overwrite.
+45. mv -v testfile4.txt testfile5.txt -> Verbose move, show files being moved.
+46. mv -u testfile6.txt testfile7.txt -> Move only if source is newer than destination.
+47. echo "Hello, World!" -> Print "Hello, World!" to the terminal.
+48. echo $PATH -> Display the PATH environment variable.
+49. echo $HOME -> Display the HOME environment variable.
+50. echo -n "No newline" -> Print without a newline.
+51. echo -e "Line1\nLine2" -> Enable interpretation of backslash escapes.
+52. echo "export PATH=$PATH:/new/path" >> ~/.bashrc -> Append to `.bashrc` file.
+53. echo -e "line1\nline2\nline3" > file.txt -> Write multiple lines to a file.
+54. cat testfile3.txt -> Display contents of a file.
+55. cat /etc/passwd -> Display system users' information.
+56. cat -n testfile3.txt -> Display contents with line numbers.
+57. cat -b testfile4.txt -> Number non-blank lines.
+58. cat -A testfile5.txt -> Display non-printing characters.
+59. cat --help -> Display help for the `cat` command.
+60. head file.txt -> Display the first 10 lines of a file.
+61. head -n 5 file.txt -> Display the first 5 lines of a file.
+62. head -c 10 file.txt -> Display the first 10 bytes of a file.
+63. tail file.txt -> Display the last 10 lines of a file.
+64. tail -n 5 file.txt -> Display the last 5 lines of a file.
+65. tail -f /var/log/syslog -> Continuously display log file as it updates.
+66. tail -n +3 file.txt -> Skip first 2 lines and display the rest.
+67. tail -c 20 file.txt -> Display the last 20 bytes of a file.
+68. more file.txt -> View a file page by page.
+69. find . -name "file.txt" -> Find a file by name.
+70. find . -type d -> Find directories only.
+71. find . -type f -> Find files only.
+72. find . -size +1M -> Find files larger than 1MB.
+73. find . -name "*.txt" -> Find all text files.
+74. find . -perm 755 -> Find files with permission 755.
+75. find . -mtime -1 -> Find files modified within the last day.
+76. find . -maxdepth 1 -> Limit search to the current directory.
+77. find . -empty -> Find empty files or directories.
+78. wc file.txt -> Display line, word, and byte count.
+79. wc -l file.txt -> Display line count.
+80. wc -w file.txt -> Display word count.
+81. wc -c file.txt -> Display byte count.
+82. sort file.txt -> Sort the contents of a file.
+83. sort -r file.txt -> Sort in reverse order.
+84. sort -n file.txt -> Sort numerically.
+85. uniq file.txt -> Filter out duplicate lines.
+86. uniq -c file.txt -> Count and display repeated lines.
+87. uniq -d file.txt -> Display only duplicate lines.
+88. chmod 644 file.txt && ls -> Change file permissions and list.
+89. chmod +x script.sh && ls -> Make script executable and list.
+90. chmod -R 755 newdir && ls -> Change permissions recursively and list.
+91. chmod u=rwx,g=rx,o=rx newdir/ -> Set directory permissions.
+92. chown taj file.txt && chown -> Change file ownership to user `taj`.
+93. chown -R taj testdir/ && ls -> Change ownership recursively and list.
+94. df -> Display disk space usage.
+95. df -h -> Display disk space in human-readable format.
+96. df -i -> Show inode usage.
+97. df -T -> Show file system types.
+98. df -x tmpfs -> Exclude `tmpfs` file systems.
+99. du -> Show disk usage.
+100. du -h -> Show disk usage in human-readable format.
+101. du -sh . -> Show total size of current directory.
+102. du -csh -> Show cumulative size of directories.
+103. du --max-depth=1 -> Limit depth of directories listed.
+104. ps -> Show active processes.
+105. ps aux -> Show detailed list of all processes.
+106. ps -ef -> Show full-format listing of processes.
+107. ps -u taj -> Show processes of user `taj`.
+108. ps -eo pid,comm,%cpu,%mem -> Display process ID, command, CPU, and memory usage.
+109. ps -p 1234 -> Display details of process ID `1234`.
+110. history -> Show command history.
+111. history | tail -n 10 -> Show the last 10 commands.
+112. history -c -> Clear command history.
+113. uptime -> Show system uptime.
+114. whoami -> Display the current user.
+115. id -> Show user and group information.
+116. id -u -> Display the user ID.
+117. id -g -> Display the group ID.
+118. id taj -> Display user information for `taj`.
+119. date -> Display current date and time.
+120. date "+%Y-%m-%d" -> Display current date in `YYYY-MM-DD` format.
+121. date "+%H:%M:%S" -> Display current time in `HH:MM:SS` format.
+122. cal -> Show the calendar for the current month.
+123. cal -3 -> Show previous, current, and next month.
+124. cal 2023 -> Show the calendar for the year 2023.
+125. hostname -> Display the system's hostname.
+126. uname -> Show system information.
+127. uname -a -> Show detailed system information.
+128. uname -r -> Display the kernel release.
+129. uname -m -> Show the machine hardware name.
+130. uname -s -> Show the kernel name.
+131. uname -p -> Display the processor type.
+132. uname -o -> Show the operating system.
+133. lscpu -> Display CPU architecture information.
+134. lsblk -> List block devices.
+135. lsusb -> List USB devices.
+136. lspci -> List PCI devices.
+137. free -> Display memory usage.
+138. free -h -> Display memory usage in human-readable format.
+139. free -m -> Display memory usage in megabytes.
+140. dmesg -> Show kernel ring buffer messages.
+141. dmesg | tail -> Show the last few kernel messages.
+142. dmesg | grep "error" -> Search for error messages in kernel logs.
+143. sync -> Flush filesystem buffers.
+144. swapon -s -> Show swap space usage.
+145. ping -c 4 google.com -> Send 4 packets to google.com.
+146. ping -c 2 8.8.8.8 -> Send 2 packets to 8.8.8.8.
+147. lastlog -> Show the last login times of all users.
+148. groups -> Show the groups the current user belongs to.
+149. cut -d: -f1 /etc/passwd -> Display the first field of `/etc/passwd`.
+150. cut -d' ' -f1 file.txt -> Extract the first field separated by space.
+151. cut -c1-5 file.txt -> Extract the first 5 characters from each line.
+152. awk '{print $1}' file.txt -> Print the first field of each line.
+153. awk '/pattern/' file.txt -> Print lines matching a pattern.
+154. sed 's/old/new/g' file.txt -> Replace all occurrences of 'old' with 'new'.
+155. sed -i 's/old/new/g' file.txt -> Replace 'old' with 'new' in the file in-place.
+156. sed '/pattern/d' file.txt -> Delete lines matching a pattern.
+157. xargs echo < file.txt -> Pass file contents as arguments to `echo`.
+158. xargs -n 1 < file.txt -> Pass one argument per line to `xargs`.
+159. factor 100 -> Factorize the number 100.
+160. expr 2 + 3 -> Evaluate the expression `2 + 3`.
+161. seq 1 10 -> Print numbers from 1 to 10.
+162. seq -s, 1 5 -> Print numbers from 1 to 5, separated by commas.
+163. yes | head -n 5 -> Output 'yes' 5 times.
+164. crontab -l -> List cron jobs for the current user.
+165. lsattr -> List file attributes.
+166. df -> Display disk space usage.
+167. find . -type f -name "*.txt" -> Find text files in the current directory.
+168. find . -perm 777 -> Find files with permission `777`.
+169. ip a -> Show network interfaces and IP addresses.
+170. ip link show -> Display network interface details.
+171. ip route -> Show the routing table.
+172. ip link set eth0 up -> Bring the `eth0` interface up.
+173. ip link set eth0 down -> Bring the `eth0` interface down.
+174. netstat -tuln -> Show active listening ports.
+175. ss -tuln -> Show open TCP and UDP ports.
+176. ss -tulnp -> Show active ports with process ID.
+177. ifconfig -> Display network interface details.
+178. ifconfig eth0 -> Show configuration of `eth0`.
+179. ifconfig wlan0 down -> Bring down the `wlan0` interface.
+180. ifconfig wlan0 up -> Bring up the `wlan0` interface.
+181. arp -> Show the ARP table.
+182. arp -a -> Display all entries in the ARP cache.
+183. ip addr show -> Display IP addresses and related information.
+184. hostname -I -> Show all IP addresses of the host.
+185. host google.com -> Perform DNS lookup for `google.com`.
+186. lscpu -> Show CPU architecture information.
+187. lsblk -> List block devices.
+188. lsusb -> List USB devices.
+189. lspci -> List PCI devices.
+190. free -> Show memory usage.
+191. free -h -> Display memory usage in human-readable format.
+192. free -m -> Display memory usage in megabytes.
+193. ps -> Display active processes.
+194. ps aux -> Show all processes with detailed information.
+195. ps -ef -> Show full listing of processes.
+196. ps -u taj -> Show processes for user `taj`.
+197. ps -eo pid,comm,%cpu,%mem -> Show process ID, command, CPU, and memory usage.
+198. ps -p 1234 -> Show details for process with ID `1234`.
+199. clear -> Clear the terminal screen.
+200. top -> Show real-time system processes and resource usage.

@@ -64,16 +64,16 @@ grep -r "pattern" testdir/
 grep -v "pattern" file.txt
 grep --color=auto "pattern" file.txt
 grep -l "pattern" file.txt
-find / -name "file.txt"
+find . -name "file.txt"
 find . -type d
 find . -type f
-find / -size +100M
+find . -size +1M
 find . -name "*.txt"
-find / -perm 755
-find / -mtime -1
-find / -maxdepth 1
+find . -perm 755
+find . -mtime -1
+find . -maxdepth 1
 find . -empty
-locate testfile.txt
+locate "*.txt*
 locate "*.conf"
 updatedb
 wc file.txt
@@ -86,13 +86,13 @@ sort -n file.txt
 uniq file.txt
 uniq -c file.txt
 uniq -d file.txt
-chmod 644 file.txt
-chmod +x script.sh
-chmod -R 755 testdir
-chmod u=rwx,g=rx,o=rx testdir/
-chown user:group file.txt
-chown -R user:group testdir/
-chown --reference=otherfile.txt file.txt
+chmod 644 file.txt && ls
+chmod +x script.sh && ls
+chmod -R 755 newdir && ls
+chmod u=rwx,g=rx,o=rx newdir/
+chown taj file.txt && chown
+chown -R taj testdir/ && ls
+
 df
 df -h
 df -i
@@ -106,7 +106,7 @@ du --max-depth=1
 ps
 ps aux
 ps -ef
-ps -u username
+ps -u taj
 ps -eo pid,comm,%cpu,%mem
 ps -p 1234
 top
@@ -119,8 +119,8 @@ unset PATH
 alias ll='ls -alF'
 unalias ll
 history
-history -c
 history | tail -n 10
+history -c
 clear
 uptime
 whoami
@@ -177,7 +177,7 @@ uptime
 uname -r
 hostname
 ping -c 4 google.com
-ping -i 2 8.8.8.8
+ping -c 2 8.8.8.8
 traceroute google.com
 who
 w
@@ -215,8 +215,8 @@ chattr -i file.txt
 df
 du
 du -sh *
-find / -type f -name "*.conf"
-find / -perm 777
+find . -type f -name "*.txt"
+find . -perm 777
 ip a
 ip link show
 ip route

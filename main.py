@@ -21,7 +21,7 @@ def generate_image():
         pyautogui.hotkey('win','up')
         pyautogui.typewrite("kali")
         pyautogui.press('enter')
-        time.sleep(6)
+        time.sleep(10)
         pyautogui.typewrite("clear")
         pyautogui.press('enter')
         time.sleep(1)
@@ -41,10 +41,10 @@ def generate_image():
             time.sleep(1)
             print(f"{i}. {x}")  
             
-    pyautogui.typewrite("exit")
-    pyautogui.press('enter')
-    pyautogui.typewrite("exit")
-    pyautogui.press('enter')      
+    # pyautogui.typewrite("exit")
+    # pyautogui.press('enter')
+    # pyautogui.typewrite("exit")
+    # pyautogui.press('enter')      
     print("Done")
 
 def create_pdfs():
@@ -137,7 +137,7 @@ def create_pdfs():
     count =1
 
     i = 1
-    while i <=20:
+    while i <=200:
         # command=command_list.readline()
         text1=command_desc_list.readline()
         text2=command_desc_list.readline()
@@ -184,7 +184,7 @@ def merge_pdfs():
 
 input("Prepare linux terminal and Press Enter to start the process. The switch to terminal.\n You will have 5 seconds to switch to terminal \n Press Enter to start the process")
 input("Press enter to start the process. Do not use the Pc while the process is running.")
-generate_image()
+# generate_image()
 create_pdfs()
 merge_pdfs()
 input("Press Enter to exit")
