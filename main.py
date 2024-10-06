@@ -182,9 +182,9 @@ def merge_pdfs():
 
 
 
-# input("Prepare linux terminal and Press Enter to start the process. The switch to terminal.\n You will have 5 seconds to switch to terminal \n Press Enter to start the process")
-# input("Press enter to start the process. Do not use the Pc while the process is running.")
-# generate_image()
-# create_pdfs()
+input("Prepare linux terminal and Press Enter to start the process. The switch to terminal.\n You will have 5 seconds to switch to terminal \n Press Enter to start the process")
+input("Press enter to start the process. Do not use the Pc while the process is running.")
+generate_image()
+create_pdfs()
 merge_pdfs()
 input("Press Enter to exit")
